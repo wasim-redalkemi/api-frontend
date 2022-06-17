@@ -1,0 +1,22 @@
+/* make the customizations */
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
+
+//custom classes
+img{
+	max-width: 100%;
+}
+.object-cover{
+	object-fit: cover;
+}
+.bg-black-gradient {
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8) 70%);
+}
+.listing-items {
+	.card-img {
+		@media(max-width: 767px){
+			height: 300px;		
+		}
+	}
+}
