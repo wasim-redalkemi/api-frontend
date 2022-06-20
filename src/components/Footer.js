@@ -6,7 +6,7 @@ export default function Footer() {
       <Container>
         <Row>
           <Col xs="12" className="text-center py-3">
-            <p className="text-white mb-0">© Worldwide Copyright Reserved. <Link to="/" className="text-white text-decoration-none">RedAlkemi</Link></p>
+            <p className="text-white mb-0">© {new Date().getFullYear()} <Link to="/" className="text-white text-decoration-none">MoviesKing.com</Link></p>
           </Col>
         </Row>
       </Container>

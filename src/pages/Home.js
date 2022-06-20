@@ -19,7 +19,7 @@ export default function Home() {
   const fetchData = async (url) => {
     try {
 
-      console.log(url);
+      //console.log(url);
       // loader 
       setIsLoaded(false);
 
@@ -95,8 +95,8 @@ export default function Home() {
               <Col lg="3" md="4" xs="6" key={item.id}>
                 <Link to={"/download/"+item.slug}>
                   <Card className="text-white">
-                    <Card.Img src="/assets/images/blog.jpg" alt="Card image" width="350" height="350" className="object-cover" />
-                  {/*<Card.Img src={item.jetpack_featured_media_url} alt="Card image" width="350" height="350" className="object-cover" />*/}
+                    {/* <Card.Img src="/assets/images/blog.jpg" alt="Card image" width="350" height="350" className="object-cover" /> */}
+                    <Card.Img src={typeof item.yoast_head_json.og_image != "undefined" ? item.yoast_head_json.og_image[0].url : ""} alt="Card image" width="350" height="350" className="object-cover" />
                     <Card.ImgOverlay className="d-flex flex-column justify-content-end bg-black-gradient">
                       <Card.Title as="p">{item.title.rendered}</Card.Title>
                     </Card.ImgOverlay>

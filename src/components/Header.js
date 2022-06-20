@@ -38,7 +38,7 @@ export default function Header() {
   }
 
   useEffect(() => {
-    fetchData("/categories?include=6,59,10,39,35,36,37,60&orderby=id");
+    fetchData("/categories?include=24,110,6,5,4,21,68,20&orderby=include");
   }, []);
 
   return(
@@ -49,7 +49,7 @@ export default function Header() {
       <Container>
         <Row>
           <Col xs="12" className="text-center py-4">
-            <Link to="/"><Image fluid="true" src="/assets/images/logo.png" alt="logo" width="170" height="75"></Image></Link>
+            <Link to="/"><Image fluid="true" src="/assets/images/MoviesKing-logo.png" alt="logo" width="170" height="75"></Image></Link>
           </Col>
           <Col lg="5" md="7" xs="12" className="mx-auto">
             <Form onSubmit={handleSubmit}>
