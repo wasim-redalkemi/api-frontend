@@ -49,7 +49,7 @@ export default function Header() {
       <Container>
         <Row>
           <Col xs="12" className="text-center py-4">
-            <Link to="/"><Image fluid="true" src="/assets/images/MoviesKing-logo.png" alt="logo" width="170" height="75"></Image></Link>
+            <Link to="/"><Image fluid="true" src="/assets/images/MoviesKing-logo.png" alt="logo" width="201" height="36"></Image></Link>
           </Col>
           <Col lg="5" md="7" xs="12" className="mx-auto">
             <Form onSubmit={handleSubmit}>

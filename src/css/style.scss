@@ -23,8 +23,10 @@ img{
 
 
 .single-item-details {
-	.has-text-align-center {
-		text-align: center;
+	.has-text-align-center, .mb-center {
+		text-align: center;;
+		width: 100%;
+		display: inline-block;
 	}
 	.maxbutton {
 		padding: 10px 15px;
@@ -33,20 +35,27 @@ img{
 		color: #fff;
 		text-decoration: none;
 		border-radius: 5px;
+		background: $success;
 		&:hover {
 			opacity: .8;
 		}
 	}
 	.maxbutton.maxbutton-g-direct-1 {
-		background: var(--bs-success);
+		background: $success;
 	}
 	.maxbutton.maxbutton-mega-nz {
-		background: var(--bs-indigo);
+		background: $indigo;
 	}
 	.maxbutton.maxbutton-dood-stream {
-		background: var(--bs-info);
+		background: $info;
 	}
 	.maxbutton.maxbutton-rank-uploads {
-		background: var(--bs-primary);
+		background: $primary;
+	}
+	.maxbutton.maxbutton-g-drive {
+		background: $teal;
+	}
+	.maxbutton.maxbutton-drop-galaxy {
+		background: $orange;
 	}
 }
