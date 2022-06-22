@@ -8,7 +8,7 @@ export default function Home() {
 
   const params = useParams();
   const location = useLocation();
-  const defaultUrl = "/posts?per_page=20";
+  const defaultUrl = "/posts?per_page=20&orderby=date";
 
   const [url, setUrl] = useState(defaultUrl);
   const [page, setPage] = useState(1);
