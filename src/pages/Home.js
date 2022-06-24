@@ -8,7 +8,17 @@ export default function Home() {
 
   const params = useParams();
   const location = useLocation();
-  const defaultUrl = "/posts?per_page=20&orderby=date";
+
+  const [site, setSite] = useState(() => {
+    var currentSite = parseInt(localStorage.getItem("site"));
+    if(currentSite){
+      return currentSite;
+    }
+    else{
+      return 1;
+    }
+  });
+  const defaultUrl = "/posts?site="+site+"&per_page=20&orderby=date";
 
   const [url, setUrl] = useState(defaultUrl);
   const [page, setPage] = useState(1);

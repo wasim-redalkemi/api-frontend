@@ -11,9 +11,20 @@ export default function Header() {
   const navigate = useNavigate();
   const [categories, setCategories] = useState([]);
   const [searchText, setSearchText] = useState('');
+  const [site, setSite] = useState(() => {
+    var currentSite = parseInt(localStorage.getItem("site"));
+    if(currentSite){
+      return currentSite;
+    }
+    else{
+      return 1;
+    }
+  });
 
   const fetchData = async (url) => {
     try {
+
+      //console.log(url);
 
       //fetch data
       const response = await fetch(api_domain+url);
@@ -36,9 +47,31 @@ export default function Header() {
     navigate('/search/'+searchText);
     setSearchText("");
   }
+  const handleChangeSite = (event) => {
+    event.preventDefault();
+
+    // 1 hollywood
+    // 2 bollywood
+
+    if(site === 1 ){
+      localStorage.setItem("site", 2);  
+    }
+    else{
+      localStorage.setItem("site", 1);    
+    }
+    window.location.href = window.location.origin;
+  }
 
   useEffect(() => {
-    fetchData("/categories?include=24,110,6,5,4,21,68,20&orderby=include");
+
+    //fetch categories
+    if(site === 1){
+      var categories = "24,110,6,5,4,21,68,20";
+    }
+    else{
+      var categories = "5,11,51,52,53,60,59,7";  
+    }
+    fetchData("/categories?site="+site+"&include="+categories+"&orderby=include");
   }, []);
 
   return(
@@ -65,6 +98,9 @@ export default function Header() {
                 <Button variant="success" type="submit">Search</Button>
               </InputGroup>
             </Form>
+          </Col>
+          <Col xs="12" className="text-center pb-4">
+            <Button variant="dark" size="md" onClick={handleChangeSite}>{ ((site===1) ? "Bollywood" : "Hollywood") }</Button>
           </Col>
           <Col xs="12" className="text-center pb-4">
           {
