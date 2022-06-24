@@ -26,6 +26,8 @@ export default function Download(props) {
 
   const defaultUrl = "/posts?site="+site;
   const metaDescription = "moviesking, moviesverse, movieverse, moviesflix pro, moviesFlix, moviesflixpro, 480p Movies, 720p Movies, 1080p movies, Dual Audio Movies, Hindi Dubbed Series, Hollywood Movies.";
+  const metaUrl = "https://movies-king.herokuapp.com/";
+  const metaOgImage = "/assets/images/moviesking-og-image.jpg";
 
   const fetchData = async (url, type) => {
     try {
@@ -80,8 +82,26 @@ export default function Download(props) {
     return (
       <Container>
         <Helmet>
+
+          {/*<!-- Primary Meta Tags -->*/}
           <title>TheMoviesKing | {details.title.rendered}</title>
+          <meta name="title" content={"TheMoviesKing | " + details.title.rendered} />
           <meta name="description" content={metaDescription} />
+
+          {/*<!-- Open Graph / Facebook -->*/}
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={metaUrl} />
+          <meta property="og:title" content={"TheMoviesKing | " + details.title.rendered} />
+          <meta property="og:description" content={metaDescription} />
+          <meta property="og:image" content={metaOgImage} />
+
+          {/*<!-- Twitter -->*/}
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content={metaUrl} />
+          <meta property="twitter:title" content={"TheMoviesKing | " + details.title.rendered} />
+          <meta property="twitter:description" content={metaDescription} />
+          <meta property="twitter:image" content={metaOgImage} />
+
         </Helmet>
         <Row className="pb-5 pt-4">
           <Breadcrumb>
