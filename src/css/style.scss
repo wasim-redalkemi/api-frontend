@@ -6,7 +6,6 @@
 //custom classes
 img{
 	max-width: 100%;
-	height: auto;
 }
 .object-cover{
 	object-fit: cover;
@@ -24,6 +23,9 @@ img{
 
 
 .single-item-details {
+	img{
+		height: auto;
+	}
 	.has-text-align-center, .mb-center {
 		text-align: center;;
 		width: 100%;

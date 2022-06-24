@@ -59,7 +59,7 @@ export default function Home() {
 
     //change url
     if(params.categorySlug){
-      fetch(api_domain+"/categories?slug="+params.categorySlug)
+      fetch(api_domain+"/categories?site="+site+"&slug="+params.categorySlug)
       .then(response => response.json())
       .then(data => {
         setUrl(defaultUrl + "&categories=" + data[0].id);

@@ -14,7 +14,17 @@ export default function Download(props) {
   const [isDetailsLoaded, setIsDetailsLoaded] = useState(false);
   const [isRelatedItemsLoaded, setIsRelatedItemsLoaded] = useState(false);
   const [categories, setCategories] = useState([]);
-  const defaultUrl = "/posts";
+  const [site, setSite] = useState(() => {
+    var currentSite = parseInt(localStorage.getItem("site"));
+    if(currentSite){
+      return currentSite;
+    }
+    else{
+      return 1;
+    }
+  });
+
+  const defaultUrl = "/posts?site="+site;
   const metaDescription = "moviesking, moviesverse, movieverse, moviesflix pro, moviesFlix, moviesflixpro, 480p Movies, 720p Movies, 1080p movies, Dual Audio Movies, Hindi Dubbed Series, Hollywood Movies.";
 
   const fetchData = async (url, type) => {
@@ -42,14 +52,14 @@ export default function Download(props) {
 
   useEffect(() => {
     //fetch data
-    fetchData(defaultUrl+"?slug="+slug, "details");
+    fetchData(defaultUrl+"&slug="+slug, "details");
   }, [slug]);
 
 
   useEffect(() => {
     //fetch data
     if(categories.length > 0){
-      fetchData(defaultUrl+"?categories="+categories, "relatedItems");
+      fetchData(defaultUrl+"&categories="+categories, "relatedItems");
     }
   }, [categories]);
 
