@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useLocation, Link } from "react-router-dom";
-import { Container, Row, Col, Card, Button, Spinner } from "react-bootstrap";
+import { Container, Row, Col, Card, Button, Spinner, Alert } from "react-bootstrap";
 
 export default function Home() {
 
@@ -87,6 +87,13 @@ export default function Home() {
     return (
       <Container>
         <Row>
+          <Col xs="12">
+            <Alert variant="success">
+              <h1 className="h6 m-0 d-inline">Moviesking is The Best Website/Platform For Hollywood HD Movies.</h1> We Provide Direct Google Drive Download Links For Fast And Secure Downloading. Just Click On Download Button And Follow Steps To Download And Watch Movies Online For Free.
+            </Alert>
+          </Col>
+        </Row>
+        <Row>
           <Col xs="12" className="pb-5 text-center">
             <Spinner animation="border" variant="success" role="status">
               <span className="visually-hidden">Loading...</span>
@@ -100,6 +107,13 @@ export default function Home() {
     if(items.length>0){
       return (
         <Container>
+          <Row>
+            <Col xs="12">
+              <Alert variant="success">
+                <h1 className="h6">Moviesking is The Best Website/Platform For Hollywood HD Movies.</h1> We Provide Direct Google Drive Download Links For Fast And Secure Downloading. Just Click On Download Button And Follow Steps To Download And Watch Movies Online For Free.
+              </Alert>
+            </Col>
+          </Row>
           <Row className="g-md-4 g-2 listing-items">
             {items.map(item => (
               <Col lg="3" md="4" xs="6" key={item.id}>

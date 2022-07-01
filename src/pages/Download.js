@@ -25,7 +25,7 @@ export default function Download(props) {
   });
 
   const defaultUrl = "/posts?site="+site;
-  const metaDescription = "moviesking, moviesverse, movieverse, moviesflix pro, moviesFlix, moviesflixpro, 480p Movies, 720p Movies, 1080p movies, Dual Audio Movies, Hindi Dubbed Series, Hollywood Movies.";
+  const metaDescription = "moviesking, moviesverse, moviesFlix, 480p Movies, 720p Movies, 1080p movies, Dual Audio Movies, Hindi Dubbed Series, Hollywood Movies.";
   const metaUrl = "https://movies-king.herokuapp.com/";
   const metaOgImage = "/assets/images/moviesking-og-image.jpg";
 
@@ -85,6 +85,9 @@ export default function Download(props) {
 
           {/*<!-- Primary Meta Tags -->*/}
           <title>TheMoviesKing | {details.title.rendered}</title>
+          
+          <meta name="robots" content="index, follow" />
+
           <meta name="title" content={"TheMoviesKing | " + details.title.rendered} />
           <meta name="description" content={metaDescription} />
 
