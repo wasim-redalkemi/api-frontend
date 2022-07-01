@@ -110,7 +110,7 @@ export default function Home() {
           <Row>
             <Col xs="12">
               <Alert variant="success">
-                <h1 className="h6">Moviesking is The Best Website/Platform For Hollywood HD Movies.</h1> We Provide Direct Google Drive Download Links For Fast And Secure Downloading. Just Click On Download Button And Follow Steps To Download And Watch Movies Online For Free.
+                <h1 className="h6 m-0 d-inline">Moviesking is The Best Website/Platform For Hollywood HD Movies.</h1> We Provide Direct Google Drive Download Links For Fast And Secure Downloading. Just Click On Download Button And Follow Steps To Download And Watch Movies Online For Free.
               </Alert>
             </Col>
           </Row>
