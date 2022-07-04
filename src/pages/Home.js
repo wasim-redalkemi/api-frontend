@@ -18,7 +18,7 @@ export default function Home() {
       return 1;
     }
   });
-  const defaultUrl = "/posts?site="+site+"&per_page=20&orderby=date";
+  const defaultUrl = "/posts?site="+site+"&per_page=20&orderby=modified";
 
   const [url, setUrl] = useState(defaultUrl);
   const [page, setPage] = useState(1);
