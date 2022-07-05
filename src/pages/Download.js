@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet';
 import { useParams, Link } from "react-router-dom";
 import { Container, Row, Col, Card, Spinner, Breadcrumb } from "react-bootstrap";
 
+import BannerAds from '../components/BannerAds.js';
+
 export default function Download(props) {
 
   const api_domain = process.env.NODE_ENV === "production" ? process.env.REACT_APP_API_DOMAIN : "";
@@ -120,12 +122,15 @@ export default function Download(props) {
             {/*<!-- native banner -->*/}
             <div id="container-922675462c26f8ceddf0c9a466b3ee4d"></div>
 
+            <BannerAds adskey="1968b4e10fa863cf4329e4eb4558e2d3" width="728" height="90" />
+
             {/*{details.content.rendered.replace(/moviesverse|MoviesVerse/g, "MoviesKing")}*/}
             <div className="item-content" dangerouslySetInnerHTML={{__html: details.content.rendered.replace(/moviesverse|MoviesVerse/g, "MoviesKing") }} />
           </Col>
           <Col lg="4" xs="12">
             <h3>Related</h3>
-
+            <BannerAds adskey="e53f7ff77c96509738e4f596f3bcfcef" width="320" height="50" />
+            <BannerAds adskey="37c629e416a663925a4cf17797fb2da2" width="300" height="250" />
             {
               (categories.length === 0) ? 
               <p>No result found</p> 
