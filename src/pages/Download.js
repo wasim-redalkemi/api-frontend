@@ -105,6 +105,9 @@ export default function Download(props) {
           <meta property="twitter:description" content={metaDescription} />
           <meta property="twitter:image" content={metaOgImage} />
 
+          {/*<!-- native banner -->*/}
+          <script async="async" data-cfasync="false" src="//pl17433154.profitablecpmgate.com/922675462c26f8ceddf0c9a466b3ee4d/invoke.js"></script>
+
         </Helmet>
         <Row className="pb-5 pt-4">
           <Breadcrumb>
@@ -112,12 +115,17 @@ export default function Download(props) {
             <Breadcrumb.Item active>{details.title.rendered}</Breadcrumb.Item>
           </Breadcrumb>
           <Col lg="8" xs="12" className="single-item-details">
-            <h1 className="mb-4">{details.title.rendered}</h1>            
+            <h1 className="mb-4">{details.title.rendered}</h1>   
+
+            {/*<!-- native banner -->*/}
+            <div id="container-922675462c26f8ceddf0c9a466b3ee4d"></div>
+
             {/*{details.content.rendered.replace(/moviesverse|MoviesVerse/g, "MoviesKing")}*/}
             <div className="item-content" dangerouslySetInnerHTML={{__html: details.content.rendered.replace(/moviesverse|MoviesVerse/g, "MoviesKing") }} />
           </Col>
           <Col lg="4" xs="12">
             <h3>Related</h3>
+
             {
               (categories.length === 0) ? 
               <p>No result found</p> 
