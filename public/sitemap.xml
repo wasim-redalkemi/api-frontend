@@ -6,30 +6,9 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 	<url>
-	  <loc>https://movies-king.herokuapp.com/</loc>
+	  <loc>https://movies-king.herokuapp.com/sitemap_pages.xml</loc>
 	</url>
 	<url>
-	  <loc>https://movies-king.herokuapp.com/category/dual-audio</loc>
-	</url>
-	<url>
-	  <loc>https://movies-king.herokuapp.com/category/2021-movies</loc>
-	</url>
-	<url>
-	  <loc>https://movies-king.herokuapp.com/category/480p-movies</loc>
-	</url>
-	<url>
-	  <loc>https://movies-king.herokuapp.com/category/720p-movies</loc>
-	</url>
-	<url>
-	  <loc>https://movies-king.herokuapp.com/category/1080p-movies</loc>
-	</url>
-	<url>
-	  <loc>https://movies-king.herokuapp.com/category/netflix</loc>
-	</url>
-	<url>
-	  <loc>https://movies-king.herokuapp.com/category/web-series</loc>
-	</url>
-	<url>
-	  <loc>https://movies-king.herokuapp.com/category/adult-movies</loc>
+	  <loc>https://movies-king.herokuapp.com/sitemap_posts.xml</loc>
 	</url>
 </urlset>
