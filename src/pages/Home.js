@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useLocation, Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 import { Container, Row, Col, Card, Button, Spinner, Alert } from "react-bootstrap";
 
 export default function Home() {
@@ -129,6 +130,13 @@ export default function Home() {
               </Col>
             ))}
             <Col xs="12" className="py-md-5 py-4 text-center">
+
+              {/*<!-- native banner -->*/}
+              <Helmet>
+                <script async="async" data-cfasync="false" src="//forcefulpacehauled.com/60dabc17d5ee42c470ba879998d89906/invoke.js"></script>
+              </Helmet>
+              <div id="container-60dabc17d5ee42c470ba879998d89906"></div>
+
               { page !== 1 && <Button variant="success" className="me-3" onClick={handlePrevious}>Previous</Button> }
               { page !== totalPage && <Button variant="success" onClick={handleNext}>Next</Button> }
             </Col>

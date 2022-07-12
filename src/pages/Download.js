@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { useParams, Link } from "react-router-dom";
 import { Container, Row, Col, Card, Spinner, Breadcrumb } from "react-bootstrap";
 
-import BannerAds from '../components/BannerAds.js';
+// import BannerAds from '../components/BannerAds.js';
 
 export default function Download(props) {
 
@@ -119,18 +119,28 @@ export default function Download(props) {
           <Col lg="8" xs="12" className="single-item-details">
             <h1 className="mb-4">{details.title.rendered}</h1>   
 
-            {/*<!-- native banner -->*/}
-            <div id="container-922675462c26f8ceddf0c9a466b3ee4d"></div>
 
-            {/*<BannerAds adskey="1968b4e10fa863cf4329e4eb4558e2d3" width="728" height="90" />*/}
+            {
+              window.innerWidth >= 768 &&
+              <>
+                <iframe title="Banner 728x90" class="d-md-block d-none" src="//forcefulpacehauled.com/watchnew?key=1968b4e10fa863cf4329e4eb4558e2d3" width="728" height="90" frameborder="0" scrolling="no"></iframe>
+                <iframe title="Banner 468x60" class="d-md-block d-none" src="//forcefulpacehauled.com/watchnew?key=5ad35d6644d8d97d51713c1ad23011cb" width="468" height="60" frameborder="0" scrolling="no"></iframe>
+              </>
+            }            
+
+            <iframe title="Banner 300x250" src="//forcefulpacehauled.com/watchnew?key=37c629e416a663925a4cf17797fb2da2" width="300" height="250" frameborder="0" scrolling="no"></iframe>
+            <iframe title="Banner 320x50" src="//forcefulpacehauled.com/watchnew?key=e53f7ff77c96509738e4f596f3bcfcef" width="320" height="50" frameborder="0" scrolling="no"></iframe>
+            <iframe title="Banner 160x300" src="//forcefulpacehauled.com/watchnew?key=4c28b0844c227ae22ca272aa8be81f5d" width="160" height="300" frameborder="0" scrolling="no"></iframe>
+            <iframe title="Banner 160x300" src="//forcefulpacehauled.com/watchnew?key=4f81c02a0afc865ccef6d33d015c49f8" width="160" height="300" frameborder="0" scrolling="no"></iframe>
+
 
             {/*{details.content.rendered.replace(/moviesverse|MoviesVerse/g, "MoviesKing")}*/}
             <div className="item-content" dangerouslySetInnerHTML={{__html: details.content.rendered.replace(/moviesverse|MoviesVerse/g, "MoviesKing") }} />
           </Col>
           <Col lg="4" xs="12">
             <h3>Related</h3>
-            {/*<BannerAds adskey="e53f7ff77c96509738e4f596f3bcfcef" width="320" height="50" />*/}
-            <BannerAds adskey="37c629e416a663925a4cf17797fb2da2" width="300" height="250" />
+            {/*<!-- native banner -->*/}
+            <div id="container-922675462c26f8ceddf0c9a466b3ee4d"></div>
             {
               (categories.length === 0) ? 
               <p>No result found</p> 
